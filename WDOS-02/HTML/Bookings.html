@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings</title>
+  <link rel="stylesheet" href="../CSS/Home.css">
+  <script src="../JavaScript/Booking.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="../HTML/Home.html">
+      <img src="../Images/sriluxe-getaways-logo.png" alt="logo" class="logo">
+    </a>
+    <p class="topic">SriLuxe Getaways</p>
+  </header>
+  <!---------Navigation area-------->
+
+  <nav>
+    <ul>
+      <li><a href="../HTML/Home.html">Home</a></li>
+      <li><a href="../HTML/Hotelbranches.html">Hotel branches</a></li>
+      <li><a href="../HTML/Adventures.html">Adventures</a></li>
+      <li><a href="../HTML/Restaurants.html">Restaurants</a></li>
+      <li><a class="active" href="../HTML/Bookings.html" style="color: white;">Bookings</a></li>
+    </ul>
+  </nav>
+  <br>
+<!--hotel booking-->
+  <div class="Booking">
+    <fieldset>
+      <legend class="Z">Hotel Room Booking</legend>
+      <img src="../Images/Hotelbooking.room.beach.jpg" alt="beachRoom" border="2" class="imgBooking" width="450px"
+        height="300px"><br><br>
+      <p>
+        <label for="Name">Name:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+        <input type="text" id="Name" name="Name" placeholder="Enter Your Name">
+      </p><br><br>
+      <p>
+        <label for="Mobile">Mobile:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="text" id="Mobile" name="Mobile" placeholder="Enter Your Number">
+      </p><br><br>
+      <p>
+        <label for="E-mail">E-mail:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="text" id="E-mail" name="E-mail" placeholder="Enter Your E-mail">
+      </p><br><br>
+
+
+      <p>
+        <label for="Selectthehotel">Select the hotel:</label>&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+        <select id="select">
+          <option>Negombo</option>
+          <option>Galle</option>
+          <option>Ella</option>
+          <option>Trincomale</option>
+        </select>
+      </p>
+      <br><br>
+
+      <div class="RoomType">
+        <p>Room Type:</p>
+        <p>
+          <input type="checkbox" id="single" name="roomType" value="single">
+          <label for="single">Single</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+          <input type="number" id="singleCount" name="roomTypeCount" placeholder="Select a number">
+        </p>
+        <br>
+        <p>
+          <input type="checkbox" id="double" name="roomType" value="double">
+          <label for="double">Double</label>&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="number" id="doubleCount" name="roomTypeCount" placeholder="Select a number">
+        </p>
+        <br>
+        <p>
+          <input type="checkbox" id="triple" name="roomType" value="triple">
+          <label for="triple">Triple</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+          <input type="number" id="tripleCount" name="roomTypeCount" placeholder="Select a number">
+        </p>
+      </div>
+      <br>
+
+      <p>
+        <label for="Adults">Adults:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" id="adultsCount" placeholder="Select the number">
+      </p><br>
+      <p>
+        <label for="Children">Children:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" id="childrenCount" placeholder="Select the number">
+      </p><br>
+      <p>
+        <label for="Check-in">Check-in:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+        <input type="date" id="checkInDate">
+      </p><br>
+      <p>
+        <label for="Check-out">Check-out:</label>&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="date" id="checkOutDate">
+      </p><br>
+
+      <div class="ExtraRequirements">
+        <p>Extra Requirements:</p>
+        <p>
+          <input type="checkbox" id="WiFi" name="extra" value="WiFi">
+          <label for="WiFi">WiFi</label>
+        </p>
+        <p>
+          <input type="checkbox" id="PoolView" name="extra" value="Pool View">
+          <label for="PoolView">Pool View</label>
+        </p>
+        <p>
+          <input type="checkbox" id="GardenView" name="extra" value="Garden View">
+          <label for="GardenView">Garden View</label>
+        </p>
+        <p>
+          <input type="checkbox" id="ExtraBed" name="extra" value="Extra Bed">
+          <label for="ExtraBed">Extra Bed</label>
+        </p>
+      </div>
+      <br>
+
+      <p>
+        <label for="promoCode">Promo Code:</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="text" id="promoCode" placeholder="Enter the promo code" />
+      </p>
+      <br><br>
+
+   
+   
+
+      <button type="button" onclick="calculateBooking()">Submit</button>&emsp;&emsp;
+      <button id="submit/AddToFavorites" onclick="favouritesInBooking()">Add To Favorites</button>&emsp;&emsp;
+      <button id="loyaltyPoints" onclick="checkLoyaltypoints()">Check loyalty points</button>
+      <br><br><br>
+
+      <fieldset>
+        <legend>Booking Details</legend>
+        <table>
+          <tr>
+            <td><label>Current bookings:</label></td>
+            <td>
+              <p id="currentBookings"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Cost of current bookings:</label></td>
+            <td>
+              <p id="currentCost"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Overall bookings:</label></td>
+            <td>
+              <p id="overallBookings"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Cost of overall bookings:</label></td>
+            <td>
+              <p id="overallCost"></p>
+            </td>
+          </tr>
+        </table>
+
+      </fieldset>
+    </fieldset>
+
+    <!----------------------Adventure booking area------------------------------->
+
+    <fieldset>
+      <legend class="Z">Scuba Diving Booking</legend>
+      <img src="../Images/Adventure.ScubaDiving.jpg" alt="scubadivingAD" border="2" class="imgBooking" width="450px" height="300px"><br><br>
+
+      <p>
+        <label for="Name">Name:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="text" id="name.AD" placeholder="Enter Your Name">
+      </p><br><br>
+      <p>
+        <label for="Mobile">Mobile:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+        <input type="text" id="mobile.AD" placeholder="Enter Your Number">
+      </p><br><br>
+      <p>
+        <label for="E-mail">E-mail:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+        <input type="text" id="e-mail.AD" placeholder="Enter Your E-mail">
+      </p><br><br>
+
+
+      <div class="PersonType">
+        <p>Person Type:</p>
+        <p>
+          <input type="checkbox" id="localAdults" name="roomType" value="double">
+          <label for="localAdults">Local Adults </label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+          <input type="number" id="localAdultsCount" name="Person Type" placeholder="Select a number">
+        </p>
+        <br>
+        <p>
+          <input type="checkbox" id="localkids" name="roomType" value="double">
+          <label for="localkids">Local Kids </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="number" id="localkidsCount" name="Person Type" placeholder="Select a number">
+        </p>
+        <br>
+        <p>
+          <input type="checkbox" id="foreignadults" name="roomType" value="double">
+          <label for="foreignadults">Foreign Adults </label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+          <input type="number" id="foreignadultsCount" name="Person Type" placeholder="Select a number">
+        </p>
+        <br>
+        <p>
+          <input type="checkbox" id="foreignkids" name="roomType" value="double">
+          <label for="foreignkids">Foreign Kids </label>&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="number" id="foreignkidsCount" name="Person Type" placeholder="Select a number">
+        </p>
+      </div>
+      <br>
+
+
+      <p>
+        <label for="BookingDate">Booking Date:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+        <input type="date" id="bookingdate.AD">
+      </p>
+      <br><br>
+
+      <h3>Need a guide?</h3>
+      <p>
+        <label for="GuideFor">Adults:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <input type="checkbox" id="Person.AD/GuideForAdults" name="guideA" value="AdultsGuide">
+      </p>
+      <p>
+        <label for="GuideFor">Kids:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="Person.AD/GuideForKids" name="guideK" value="KidsGuide">
+      </p>
+
+
+      <br>
+
+
+      <!--This line need to edit-->
+      <br><br>
+
+      <button id="submit.AD" onclick="calculateBookingAD()">Book Now</button> &emsp;&emsp;
+      <button id="submit.AD/BookAdventure" onclick="messageDisplay()">Book Adventure</button> &emsp;&emsp;
+      <button id="submit.AD/AddToFavorites" onclick="favouritesInAdventure()">Add To Favorites</button>
+      <br><br><br>
+
+      <fieldset>
+        <legend>Booking Details</legend>
+        <table>
+          <tr>
+            <td><label>Current bookings:</label></td>
+            <td>
+              <p id="currentBookings.AD"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Cost of current bookings:</label></td>
+            <td>
+              <p id="currentCost.AD"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Overall bookings:</label></td>
+            <td>
+              <p id="overallBookings.AD"></p>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td><label>Cost of overall bookings:</label></td>
+            <td>
+              <p id="overallCost.AD"></p>
+            </td>
+          </tr>
+        </table>
+
+      </fieldset>
+    </fieldset>
+  </div>
+  <br>
+
+  <!--Footer area -->
+
+  <footer class="footer">
+    <div class="social-icon"><br>
+      <p>Find us on</p><br>
+      <a href="https://www.facebook.com/cinnamonhotels?mibextid=b06tZ0" class="social-icon">
+        <img src="../Images/Facebook.icon.png" alt="Facebook"></a>
+      <a href="https://twitter.com/CinnamonHotels?t=0zPnuzjNC1CgNs0fpbq23Q&s=08" class="social-icon">
+        <img src="../Images/Twittericon.png" alt="Twitter"></a>
+      <a href="https://instagram.com/cinnamonhotels?igshid=MzRlODBiNWFlZA==" class="social-icon">
+        <img src="../Images/instagramicon.png" alt="Instagram"></a>
+      <a href="https://www.youtube.com/@CinnamonHotelsandResorts/about" class="social-icon">
+        <img src="../Images/Youtubeicon.png" alt="Youtube"></a>
+    </div>
+    <br><br>
+    <ul>
+      <li><a class="active" href="../HTML/Home.html" style="color: rgb(165, 137, 12);">Home</a></li>
+      <li><a href="../HTML/Hotelbranches.html">Hotel branches</a></li>
+      <li><a href="../HTML/Adventures.html">Adventures</a></li>
+      <li><a href="../HTML/Restaurants.html">Restaurants</a></li>
+      <li><a href="../HTML/Event1.html">Event1</a></li>
+      <li><a href="../HTML/Event2.html">Event2</a></li>
+      <li><a href="../HTML/Bookings.html">Bookings</a></li>
+    </ul>
+    <br>
+    <p>&copy; 2023 SriLuxe Getaways - Negombo Bliss. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

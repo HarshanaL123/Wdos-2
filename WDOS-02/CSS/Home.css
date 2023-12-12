@@ -1,0 +1,627 @@
+body, h1 ,h2, h3,p,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: bisque;
+}
+
+/*Navbar styles*/
+
+header {
+  background-color: #293096e3;
+  color: rgb(36, 20, 20);
+  padding: 20px 0;
+  text-align: center;
+  font-style: bold;
+  font-size: xxx-large;
+  height: 80px;
+  display: flex;
+}
+
+.logo{
+  height: 100px;
+  width: 100px;
+  padding-right: 450px;
+  padding-left: 20px;
+}
+
+.topic {
+  text-align: center;
+  font-style: bold;
+  color: black;
+  font-size: 50px;
+  top:-120px;
+  color: rgb(181, 111, 111);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #293096e3;
+  color: black;
+  justify-content: center;
+  height: 40px;
+
+}
+
+nav ul li {
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 20px;
+  color: rgb(181, 111, 111);
+  text-shadow: 1px 1px 2px rgba(33, 81, 136, 0.919), 0 0 25px blue, 0 0 5px rgb(137, 113, 210);
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+  color: red;
+}
+
+/*Home page styles*/
+
+.hero{
+  background-image: url(../Images/Home.new.01.jpg);  /*Home page main image*/
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 250px 0;
+
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #23117fd6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+h2{
+  text-align: center;
+  color: rgb(198, 166, 166);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(33, 33, 132), 0 0 5px darkblue;
+}
+
+/*Introduction area*/
+
+.card1 {
+  border: 1px solid #333;
+  padding: 10px;
+  display: flex;
+  background-color: palegoldenrod;
+  border-radius: 20px;
+  margin: 10px 10px;
+}
+
+/*About us area*/
+
+.card2 {
+  border: 1px solid #333;
+  padding: 10px;
+  display: flex;
+  background-color: lightgoldenrodyellow;
+  border-radius: 20px;
+  margin: 30px;
+}
+
+.card2 ul {
+  font-style: bold;
+  font-size: large;
+  padding-left: 30px;
+}
+
+/*Facilities area*/
+
+.card3 {
+  border: 1px solid #333;
+  padding: 10px;
+  display: flex;
+  background-color: palegoldenrod;
+  border-radius: 20px;
+  margin: 10px 10px;
+}
+
+.card3 ol{
+  font-style: bold;
+  padding-left: 50px;
+}
+
+/*Card 1 image*/
+
+.home2{
+  max-width: 250px;
+  height: 250px;
+  margin-left: 150px;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+/*Card 2 image*/
+
+.home3{
+  max-width: 250px;
+  height: 250px;
+  margin-left: 120px;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+/*Card 3 image*/
+
+.home4{
+  max-width: 250px;
+  height: 250px;
+  margin-left: 10px;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+/*Reasponsive codes for navbar and home page*/
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  header {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    padding: 10px 110px;
+  }
+
+  .topic {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    height: auto;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 100px 0;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    flex-direction: column;  /* For vertical content */
+    margin: 10px 0;         /* spaces between cards */
+  }
+
+  .card2 ul {
+    padding-left: 100px;
+  }
+
+  .card3 ol {
+    padding-left: 70px; 
+  }
+  
+  /*Card 1 image*/
+
+  .home2{
+    width: 232px;
+    margin-left: 50px;
+    height: 180px;
+    margin-top: 15px;
+  }
+
+  /*Card 2 image*/
+
+  .home3{
+    width: 232px;
+    margin-left: 50px;
+    height: 180px;
+    margin-top: 15px;
+  }
+
+  /*Card 3 image*/
+
+  .home4{
+    width: 232px;
+    margin-left: 50px;
+    height: 180px;
+    margin-top: 15px;
+  }
+  .footer ul li{
+    padding: 10px;
+  }
+
+
+}
+
+/*Hotel branches page styles*/
+
+.Hbranch {
+  margin-top: 30px;
+  font-style: italic;
+  font-size: xx-large;
+  background-color: #0b66a78d;
+}
+
+.pBranch{
+  padding-left: 700px;
+  margin-top: -350px;
+  font-size: large;
+}
+
+.mapB {
+  padding-left: 700px;
+}
+
+.imgB {
+  padding-left: 10px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+/*Table styles in Hotel branches page*/
+.Table{
+  border-collapse: collapse;
+  width: 875px;
+  margin: auto;
+}
+
+.Table th, .Table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+Table th {
+  background-color: #0b66a78d;
+}
+
+tr .t-foot{
+  text-align: center;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .pBranch {
+    padding-left: 10px;  /* Adjust left padding for paragraphs */
+    margin-top: 10px;    /* spaces between elements */
+  }
+
+  .mapB {
+    padding-left: 0; 
+  }
+
+  .imgB {
+    padding: 0;
+    margin: 20px 0;
+    width: 100%; 
+    height: auto; 
+  }
+
+  /* Table styles for mobile view */
+  .Table {
+    width: 100%; 
+  }
+
+  .Table th,
+  .Table td {
+    padding: 5px; /*padding for table cells */
+  }
+  .footer ul li{
+    padding: 10px;
+  }
+}
+
+
+/*Adventures page styles*/
+
+
+.AH {                             /* Heading styles*/
+  background-color: #0b66a78d;
+}
+.surfing {
+  margin: 15px;
+  display: flex;
+  column-gap: 5px;
+}
+.Forest {
+    padding-left: 250px;
+    display: flex;
+    column-gap: 15px;
+}
+.A {                       /*styles for legend in fieldset*/
+  font-size: large;
+}
+.imgF {
+  border-radius: 20px;
+  width: 415px;
+}
+.B {                       /*styles for ul */
+  font-style: normal;
+  padding-left: 40px;
+}
+.mapS {
+  margin-top: 10px;
+  padding-left: 80px;
+}
+
+
+
+
+/* Responsive  for mobile view */
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+
+  .AH {
+    text-align: center;
+  }
+
+  .surfing,
+  .Forest {
+    flex-direction: column;
+    align-items:end;
+
+  }
+
+  .surfing fieldset{
+    margin-bottom: 30px;
+  }
+
+  .Forest fieldset{
+    margin-bottom: 30px;
+   padding: 20px;
+  }
+  
+
+  .mapS {
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+
+  .imgF {
+    padding-left: 0;
+    margin: 20px 0;
+    width: 220px;
+    height: auto;
+  }
+
+  .B {
+    padding-left: 10px;
+  }
+  .footer ul li{
+    padding: 10px;
+  }
+}
+
+
+
+/*Booking page styles*/
+
+.imgBooking {   
+  border-radius: 20px;
+}
+
+.Booking {
+   display: flex;
+   padding-left: 250px;
+   text-align: left;
+   column-gap: 15px;
+}
+.Z {                   /*Styles for legend in the fieldset*/
+  font-size: large;
+  background-color: rgb(221, 176, 176);
+}
+
+
+
+
+/* Responsive  for mobile view */
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .Booking {
+    flex-direction: column;
+    padding: 2px;
+    column-gap: 0;
+  }
+  .Booking fieldset {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  .imgBooking {
+    width: 100%;
+    height: auto;
+  }
+
+  .Z {
+    text-align: center;   /*Styles for legend in the fieldset*/
+  }
+
+  /* Center the form elements */
+  .Booking input[type="text"],
+  .Booking input[type="number"],
+  .Booking select,
+  .Booking input[type="date"],
+  .Booking input[type="submit"] {
+    margin: 5px auto;
+    width: 100%;
+    max-width: 300px;
+    padding: 3px;
+  }
+  .footer ul li{
+    padding: 10px;
+  }
+}
+
+
+/*Restaurant page styles*/
+
+.R {
+  font-size: 150%;    /*Styles for legend in the fieldset*/
+}
+.Res{                 /*Fieldset styles*/
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  border: 2px solid #333;
+  text-align: center;
+  padding: 15px;
+  margin: 10px 300px 10px 300px;
+  background-color: rgba(135, 186, 222, 0.714);
+}
+.Res ul{
+  list-style: none;
+}
+
+.btn1 {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 10px;
+  background-color: #23117fd6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.H2R {                       /*styles for header in restaurant page*/
+  margin-top: 30px;
+  font-style: italic;
+  font-size: xx-large;
+  background-color: #0b66a78d;
+}
+.Rmenu {                 /*styles for menu section*/
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  
+}
+.Rmenu ul {
+  list-style: none;
+}
+
+.menuP {                 /*styles for the paragraphs in menu section*/
+  text-align: center;
+  margin-bottom: 20px;
+}
+.imgMenu {
+  margin: 20px;
+  width: 415px;
+  border-radius: 20px;
+}
+
+/* Responsive for mobile view */
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .Res {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .Res img {
+    width: 100%;
+    height: auto;
+    margin: -5px;
+  }
+
+  .H2R {
+    margin-top: 20px;
+    font-size: x-large;
+  }
+
+  .Rmenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menuP {
+    margin-bottom: 10px;
+  }
+  .imgMenu {
+    width: 280px;
+    margin: 0;
+  }
+  .footer ul li{
+    padding: 10px;
+  }
+}
+
+
+/*Footer styles*/
+
+.footer {
+  text-align: center;
+  background: linear-gradient(to right,rgb(7, 7, 92),rgb(179, 179, 219));
+}
+
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
